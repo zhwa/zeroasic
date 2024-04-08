@@ -21,7 +21,7 @@ module pwm #(
     end
 
     always @(posedge clk) begin
-        if (reset)
+        if(reset)
             out <= 0;
         else
             out <= INVERT == 1'b0 ? pwm_on : ! pwm_on;

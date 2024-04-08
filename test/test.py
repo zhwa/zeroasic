@@ -41,16 +41,17 @@ async def test_all(dut):
     # pwm should all be low at start
     assert dut.pwm0_out == 0
     assert dut.pwm1_out == 0
-    assert dut.pwm1_out == 0
+    assert dut.pwm2_out == 0
 
     # do 3 ramps for each encoder 
     max_count = 255
-    await run_encoder_test(encoder0, max_count)
-    await run_encoder_test(encoder1, max_count)
-    await run_encoder_test(encoder2, max_count)
+    await run_encoder_test(encoder0,  max_count)
+    await run_encoder_test(encoder1,  max_count)
+    await run_encoder_test(encoder2,  max_count)
 
     # sync to pwm
     await RisingEdge(dut.pwm0_out)
+    await FallingEdge(dut.clk)
     # pwm should all be on for max_count 
     for i in range(max_count): 
         assert dut.pwm0_out == 1
