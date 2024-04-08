@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Debounce the inputs, drive an encoder module, and output a PWM signal for each encoder.
 
 ## How to test
 
-Explain how to use your project
+Twist each encoder and the LEDs attached to the outputs should change in brightness.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Use 3 digital encoders attached to the first 6 inputs.
