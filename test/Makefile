@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = tt_um_zhwa_rgb_mixer.v rgb_mixer.v debounce.v encoder.v pwm.v
 
 ifneq ($(GATES),yes)
 
